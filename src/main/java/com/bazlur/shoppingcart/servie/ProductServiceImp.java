@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class ProductServiceImp implements ProductService {
     private ProductRepo repo;
-    public ProductServiceImp(ProductRepoImp repo){
+    public ProductServiceImp(ProductRepo repo){
         this.repo=repo;
     }
 

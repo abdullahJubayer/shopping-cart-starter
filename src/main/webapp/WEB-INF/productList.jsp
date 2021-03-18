@@ -13,24 +13,26 @@
     <title>Product List</title>
 </head>
 <body>
-<% List<ProductDTO> productList = (List<ProductDTO>) request.getAttribute("produtcs"); %>
+<% List<ProductDTO> productList = (List<ProductDTO>) request.getAttribute("products"); %>
 <table>
     <thead>
-    <tr>Name</tr>
-    <tr>Description</tr>
-    <tr>Price</tr>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
     </thead>
+
     <% for (ProductDTO product : productList) {%>
     <tr>
-        <td><%=product.getName()%>
+        <td>
+            <%=product.getName()%>
         </td>
-    </tr>
-    <tr>
-        <td><%=product.getDescription()%>
+        <td>
+            <%=product.getDescription()%>
         </td>
-    </tr>
-    <tr>
-        <td><%=product.getPrice()%>
+        <td>
+            <%=product.getPrice()%>
         </td>
     </tr>
     <%}%>

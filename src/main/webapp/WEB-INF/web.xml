@@ -9,7 +9,7 @@
     </welcome-file-list>
 
     <servlet-mapping>
-        <servlet-name>Server Time</servlet-name>
-        <url-pattern>/server-time</url-pattern>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
 </web-app>
