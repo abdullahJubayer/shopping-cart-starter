@@ -24,6 +24,6 @@ public class HomeServlet extends HttpServlet {
 
         List<ProductDTO> productDTOList=productService.findAllSortedProduct();
         req.setAttribute("products",productDTOList);
-        req.getRequestDispatcher("WEB-INF/productList.jsp").forward(req,resp);
+        req.getRequestDispatcher("WEB-INF/home.jsp").forward(req,resp);
     }
 }
