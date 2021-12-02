@@ -15,6 +15,7 @@
         <div class="container">
             <div class="jumbotron">
                 <h1>Welcome to E-Shops !</h1>
+                <img src="../bangladesh_flag.jpg" style="height: 100px" alt="Bangladesh Image"/>
             </div>
             <div class="row">
                 <c:forEach var="product" items="${products}">
