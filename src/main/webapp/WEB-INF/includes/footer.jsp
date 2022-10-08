@@ -6,9 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 </body>
-<footer class="footer mt-auto py-3 fixed-bottom">
-    <div class="container">
+<footer class="bg-dark text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         <span class="text-muted">Copyright &copy; eShops.com 2021</span>
     </div>
+    <!-- Copyright -->
 </footer>
 
