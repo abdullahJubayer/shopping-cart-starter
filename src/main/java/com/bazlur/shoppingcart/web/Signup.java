@@ -1,7 +1,9 @@
 package com.bazlur.shoppingcart.web;
 
 import com.bazlur.shoppingcart.dto.UserDTO;
+import com.bazlur.shoppingcart.repo.UserRepoImp;
 import com.bazlur.shoppingcart.servie.UserService;
+import com.bazlur.shoppingcart.servie.UserServiceImp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,8 +16,8 @@ import java.io.IOException;
 
 @WebServlet(name = "Signup",urlPatterns = "/signup")
 public class Signup extends HttpServlet {
-    private static final Logger logger= LoggerFactory.getLogger(LoginServlet.class);
-    private UserService userService;
+    private static final Logger logger= LoggerFactory.getLogger(Signup.class);
+    private UserService userService=new UserServiceImp(new UserRepoImp());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,7 +31,7 @@ public class Signup extends HttpServlet {
         if (isUserValid()){
             logger.info("user is valid create a new user with user id :{}",user);
             userService.saveUser(user);
-            resp.sendRedirect("/home");
+            resp.sendRedirect("home");
         }else {
             logger.info("user send Invalid Data :{}",user);
             req.getRequestDispatcher("WEB-INF/signup.jsp").forward(req,resp);

@@ -1,6 +1,6 @@
 package com.bazlur.shoppingcart.servie;
 
-import com.bazlur.shoppingcart.dto.User;
+import com.bazlur.shoppingcart.domain.User;
 import com.bazlur.shoppingcart.dto.UserDTO;
 import com.bazlur.shoppingcart.repo.UserRepo;
 import com.bazlur.shoppingcart.repo.UserRepoImp;

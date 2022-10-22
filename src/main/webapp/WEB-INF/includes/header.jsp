@@ -14,4 +14,4 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/webjars/bootstrap/5.1.1/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/webjars/bootstrap/5.1.1/css/bootstrap.min.css">
 </head>
-<body style="padding-top: 70px;">
+<body style="padding-top: 70px; padding-bottom: 70px">

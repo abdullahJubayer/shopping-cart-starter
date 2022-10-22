@@ -1,4 +1,4 @@
-package com.bazlur.shoppingcart.dto;
+package com.bazlur.shoppingcart.domain;
 
 public class User {
     private String userName;

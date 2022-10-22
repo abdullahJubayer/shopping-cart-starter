@@ -26,7 +26,7 @@
 
             <div class="control-group">
                 <!-- LastName -->
-                <label class="control-label" for="last_name">LasttName</label>
+                <label class="control-label" for="last_name">LastName</label>
                 <div class="controls">
                     <input type="text" id="last_name" name="last_name" placeholder="" class="input-xlarge">
                     <p class="help-block">LastName can contain any letters or numbers</p>
