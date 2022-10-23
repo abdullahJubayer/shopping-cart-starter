@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 @WebServlet(name = "Signup",urlPatterns = "/signup")
 public class Signup extends HttpServlet {
@@ -28,17 +29,20 @@ public class Signup extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var user=copyParameter(req);
-        if (isUserValid()){
+        Map<String, String> errors=
+        if (validateUser(user)){
             logger.info("user is valid create a new user with user id :{}",user);
             userService.saveUser(user);
             resp.sendRedirect("home");
         }else {
             logger.info("user send Invalid Data :{}",user);
+            req.setAttribute("errors",errors);
             req.getRequestDispatcher("WEB-INF/signup.jsp").forward(req,resp);
         }
     }
 
-    private boolean isUserValid() {
+    private boolean validateUser(UserDTO user) {
+
         return true;
     }
 

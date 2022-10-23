@@ -22,6 +22,6 @@ dependencies {
     implementation 'jstl:jstl:1.2'
     implementation 'org.webjars:bootstrap:5.1.1'
     implementation 'ch.qos.logback:logback-classic:1.4.3'
-
+    implementation 'org.hibernate:hibernate-validator:6.0.12.Final'
 }
 
